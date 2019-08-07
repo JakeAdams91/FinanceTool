@@ -35,6 +35,7 @@
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -106,12 +107,14 @@
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.headerPanel.Controls.Add(this.btnClose);
             this.headerPanel.Controls.Add(this.lblHeader);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(174, 0);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(627, 51);
             this.headerPanel.TabIndex = 1;
+            this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseDown);
             // 
             // lblHeader
             // 
@@ -122,6 +125,20 @@
             this.lblHeader.Size = new System.Drawing.Size(129, 29);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Dashboard";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.BackgroundImage = global::FinanceTool2.Properties.Resources.CloseI;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(590, 7);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(28, 27);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // Home
             // 
@@ -150,6 +167,7 @@
         private System.Windows.Forms.Button btnBudgetTool;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 
