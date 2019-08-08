@@ -38,5 +38,45 @@ namespace FinanceTool2
         {
             this.Close();
         }
+        /// <summary>
+        /// calls pagesbtnEventHandler to toggle selected page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnDashboard_Click(object sender, EventArgs e)
+        {
+            string pageTitle = "Dashboard";
+            pagesBtnEventHandler(sender, pageTitle);
+        }
+        /// <summary>
+        /// calls pagesbtnEventHandler to toggle selected page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnBudgetTool_Click(object sender, EventArgs e)
+        {
+            string pageTitle = "Budget Tool";
+            pagesBtnEventHandler(sender, pageTitle);
+        }
+        /// <summary>
+        /// calls pagesbtnEventHandler to toggle selected page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnInvestmentCalc_Click(object sender, EventArgs e)
+        {
+            string pageTitle = "Investment Calculator";
+            pagesBtnEventHandler(sender, pageTitle);
+        }
+        /// <summary>
+        /// Handles select events, changing Header title and toggling
+        /// on appropriate page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="pageTitle"></param>
+        public void pagesBtnEventHandler(object sender, string pageTitle)
+        {
+            this.lblHeader.Text = pageTitle;
+        }
     }
 }

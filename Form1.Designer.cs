@@ -34,8 +34,8 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
-            this.lblHeader = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblHeader = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -64,8 +64,9 @@
             this.btnInvestmentCalc.Name = "btnInvestmentCalc";
             this.btnInvestmentCalc.Size = new System.Drawing.Size(174, 50);
             this.btnInvestmentCalc.TabIndex = 5;
-            this.btnInvestmentCalc.Text = "Investment Calculator";
+            this.btnInvestmentCalc.Text = "Investment Calc";
             this.btnInvestmentCalc.UseVisualStyleBackColor = false;
+            this.btnInvestmentCalc.Click += new System.EventHandler(this.BtnInvestmentCalc_Click);
             // 
             // btnBudgetTool
             // 
@@ -80,6 +81,7 @@
             this.btnBudgetTool.TabIndex = 4;
             this.btnBudgetTool.Text = "Budget Tool";
             this.btnBudgetTool.UseVisualStyleBackColor = false;
+            this.btnBudgetTool.Click += new System.EventHandler(this.BtnBudgetTool_Click);
             // 
             // btnDashboard
             // 
@@ -94,6 +96,7 @@
             this.btnDashboard.TabIndex = 3;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // LogoPanel
             // 
@@ -116,16 +119,6 @@
             this.headerPanel.TabIndex = 1;
             this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseDown);
             // 
-            // lblHeader
-            // 
-            this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(23, 9);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(129, 29);
-            this.lblHeader.TabIndex = 0;
-            this.lblHeader.Text = "Dashboard";
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
@@ -139,6 +132,16 @@
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(23, 9);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(129, 29);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "Dashboard";
             // 
             // Home
             // 
