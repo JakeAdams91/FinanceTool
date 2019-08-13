@@ -19,6 +19,7 @@ namespace FinanceTool2
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
+        public string _Page = "Dashboard";
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -77,6 +78,26 @@ namespace FinanceTool2
         public void pagesBtnEventHandler(object sender, string pageTitle)
         {
             this.lblHeader.Text = pageTitle;
+            //string selectedPage = pageTitle;
+            //_Page = pageTitle;
+            switch (pageTitle)
+            {
+                case "Dashboard":
+                    this.dashboard1.Visible = true;
+                    this.budgetTool1.Visible = false;
+                    this.investCalc1.Visible = false;
+                    break;
+                case "Budget Tool":
+                    this.dashboard1.Visible = false;
+                    this.budgetTool1.Visible = true;
+                    this.investCalc1.Visible = false;
+                    break;
+                case "Investment Calculator":
+                    this.dashboard1.Visible = false;
+                    this.budgetTool1.Visible = false;
+                    this.investCalc1.Visible = true;
+                    break;
+            }
         }
     }
 }

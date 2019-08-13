@@ -34,8 +34,11 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.investCalc1 = new FinanceTool2.InvestCalc();
+            this.budgetTool1 = new FinanceTool2.BudgetTool();
+            this.dashboard1 = new FinanceTool2.Dashboard();
             this.panel1.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +122,16 @@
             this.headerPanel.TabIndex = 1;
             this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseDown);
             // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(23, 9);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(129, 29);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "Dashboard";
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
@@ -133,15 +146,28 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // lblHeader
+            // investCalc1
             // 
-            this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Bahnschrift", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(23, 9);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(129, 29);
-            this.lblHeader.TabIndex = 0;
-            this.lblHeader.Text = "Dashboard";
+            this.investCalc1.Location = new System.Drawing.Point(174, 52);
+            this.investCalc1.Name = "investCalc1";
+            this.investCalc1.Size = new System.Drawing.Size(625, 476);
+            this.investCalc1.TabIndex = 4;
+            this.investCalc1.Visible = false;
+            // 
+            // budgetTool1
+            // 
+            this.budgetTool1.Location = new System.Drawing.Point(174, 50);
+            this.budgetTool1.Name = "budgetTool1";
+            this.budgetTool1.Size = new System.Drawing.Size(625, 476);
+            this.budgetTool1.TabIndex = 3;
+            this.budgetTool1.Visible = false;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.Location = new System.Drawing.Point(174, 52);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(625, 476);
+            this.dashboard1.TabIndex = 2;
             // 
             // Home
             // 
@@ -149,6 +175,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(801, 528);
+            this.Controls.Add(this.investCalc1);
+            this.Controls.Add(this.budgetTool1);
+            this.Controls.Add(this.dashboard1);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -171,6 +200,9 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Button btnClose;
+        private Dashboard dashboard1;
+        private BudgetTool budgetTool1;
+        private InvestCalc investCalc1;
     }
 }
 
